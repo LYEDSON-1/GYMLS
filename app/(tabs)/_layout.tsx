@@ -12,7 +12,16 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'TrainingScreen',
+          title: 'Home',
+          tabBarIcon: ({ color }) => (
+            <FontAwesome size={25} name="home" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="training"
+        options={{
+          title: 'Treinos',
           tabBarIcon: ({ color }) => (
             <FontAwesome size={25} name="heartbeat" color={color} />
           ),
