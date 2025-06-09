@@ -7,8 +7,8 @@ const treinosExemplo = [
   { id: '3', data: '03/06/2025', treino: 'Pernas' },
 ];
 
-const ITEM_MARGIN = 8;
-const CONTAINER_PADDING = 32; // px-4 em cada lado = 16 + 16
+const ITEM_MARGIN = 18;
+const CONTAINER_PADDING = 32;
 const ITEM_WIDTH =
   (Dimensions.get('window').width - CONTAINER_PADDING - ITEM_MARGIN) / 2;
 
@@ -23,7 +23,7 @@ export default function Historico() {
 
   return (
     <View className="flex-1 px-4 pt-12 bg-neutral-100">
-      <Text className="mb-2 text-3xl font-extrabold text-center text-neutral-900">
+      <Text className="mb-2 text-3xl font-extrabold text-center text-cyan-600">
         Histórico de Treinos
       </Text>
       <Text className="mb-6 text-lg font-medium text-center text-neutral-500">
@@ -46,17 +46,22 @@ export default function Historico() {
             style={{
               width: ITEM_WIDTH,
               marginBottom: ITEM_MARGIN,
-              backgroundColor: 'white',
-              borderRadius: 16,
-              padding: 16,
-              shadowColor: '#000',
-              shadowOpacity: 0.05,
-              shadowRadius: 4,
-              elevation: 2,
+              backgroundColor: '#fff',
+              borderRadius: 18,
+              padding: 18,
+              shadowColor: '#06b6d4',
+              shadowOpacity: 0.08,
+              shadowRadius: 8,
+              elevation: 3,
+              alignSelf: 'center',
             }}
           >
-            <Text className="mb-1 text-base text-neutral-400">{item.data}</Text>
-            <Text className="text-lg font-bold text-neutral-900">{item.treino}</Text>
+            <Text style={{ color: '#06b6d4', fontWeight: 'bold', fontSize: 13, marginBottom: 2 }}>
+              {item.data}
+            </Text>
+            <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#0f172a' }}>
+              {item.treino}
+            </Text>
           </View>
         )}
         ListEmptyComponent={
