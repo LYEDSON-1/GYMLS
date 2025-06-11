@@ -1,7 +1,16 @@
 import { View, Text, Image, TouchableOpacity } from 'react-native';
-import { Stack } from 'expo-router';
+import { Stack, useRouter } from 'expo-router';
+import { supabase } from '~/utils/supabase';
 
 export default function ProfileScreen() {
+  const router = useRouter();
+
+  // Função para sair da conta
+  async function handleLogout() {
+    await supabase.auth.signOut();
+    router.replace('/login'); // Redireciona para a tela de login
+  }
+
   return (
     <>
       <Stack.Screen options={{ title: 'Perfil' }} />
@@ -26,6 +35,12 @@ export default function ProfileScreen() {
         </View>
         <TouchableOpacity className="px-8 py-3 mt-4 shadow bg-cyan-600 rounded-xl active:opacity-80">
           <Text className="text-base font-semibold text-white">Editar Perfil</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          className="w-full max-w-xs px-8 py-3 mt-4 bg-red-600 rounded-xl active:opacity-80"
+          onPress={handleLogout}
+        >
+          <Text className="text-base font-semibold text-center text-white">Sair da conta</Text>
         </TouchableOpacity>
       </View>
     </>
