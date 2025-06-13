@@ -1,3 +1,4 @@
+import { router } from 'expo-router';
 import { Text, View, TouchableOpacity, Dimensions, ScrollView } from 'react-native';
 import { LineChart } from 'react-native-chart-kit';
 
@@ -73,7 +74,7 @@ export default function HomeScreen() {
 					className="w-full max-w-md px-8 py-4 mb-4 shadow bg-neutral-900 rounded-xl active:opacity-80"
 					activeOpacity={0.85}
 					onPress={() => {
-						// Navegação ou ação para adicionar novo treino
+						router.push('/workouts/create')
 					}}
 				>
 					<Text className="text-lg font-extrabold text-center text-white">Adicionar novo treino</Text>
@@ -83,7 +84,7 @@ export default function HomeScreen() {
 					className="w-full max-w-md px-8 py-4 mb-8 shadow bg-cyan-600 rounded-xl active:opacity-80"
 					activeOpacity={0.85}
 					onPress={() => {
-						// Navegação ou ação para iniciar treino
+						
 					}}
 				>
 					<Text className="text-lg font-bold text-center text-white">Iniciar treino</Text>
