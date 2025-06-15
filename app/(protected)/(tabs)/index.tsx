@@ -9,14 +9,14 @@ export default function HomeScreen() {
 		<ScrollView contentContainerStyle={{ flexGrow: 1 }}>
 			<View className="items-center flex-1 px-4 pt-10 pb-8 bg-neutral-100">
 				<View className="items-center mb-6 pt-7">
-					<Text className="mb-2 text-4xl font-extrabold text-cyan-600">Bem-vindo 👋</Text>
+					<Text className="mb-2 text-4xl font-extrabold text-indigo-900">Bem-vindo 👋</Text>
 					<Text className="mb-2 text-lg text-center text-neutral-500">
 						Organize e acompanhe seus treinos de forma simples e prática.
 					</Text>
 				</View>
 
 				<View className="w-full p-4 mb-8 bg-white shadow rounded-2xl">
-					<Text className="mb-2 font-extrabold text-center text-cyan-600">Progresso Semanal</Text>
+					<Text className="mb-2 font-extrabold text-center text-indigo-900">Progresso Semanal</Text>
 					<LineChart
 						data={{
 							labels: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'],
@@ -81,7 +81,7 @@ export default function HomeScreen() {
 				</TouchableOpacity>
 
 				<TouchableOpacity
-					className="w-full max-w-md px-8 py-4 mb-8 shadow bg-cyan-600 rounded-xl active:opacity-80"
+					className="w-full max-w-md px-8 py-4 mb-8 bg-indigo-900 shadow rounded-xl active:opacity-80"
 					activeOpacity={0.85}
 					onPress={() => {
 						
