@@ -39,7 +39,7 @@ export default function TrainingScreen() {
     return (
         <ScrollView contentContainerStyle={{ flexGrow: 1, paddingBottom: 32 }}>
             <View className="flex-1 px-4 pt-12 bg-neutral-100">
-                <Text className="mb-1 text-3xl font-extrabold text-center text-neutral-900">Meus treinos</Text>
+                <Text className="mb-1 text-3xl font-extrabold text-center text-indigo-800">Meus treinos</Text>
                 <Text className="mb-6 text-lg font-medium text-center text-neutral-500">
                     Seus treinos organizados por dia
                 </Text>
@@ -51,7 +51,7 @@ export default function TrainingScreen() {
                         onChangeText={setBusca}
                     />
                     <TouchableOpacity
-                        className="px-5 py-3 rounded-lg shadow bg-cyan-600"
+                        className="px-5 py-3 bg-indigo-800 rounded-lg shadow"
                         activeOpacity={0.85}
                         onPress={() => {
                             // ação para adicionar novo treino
@@ -77,7 +77,7 @@ export default function TrainingScreen() {
                                 flexDirection: 'row',
                                 alignItems: 'center',
                                 padding: 18,
-                                shadowColor: '#06b6d4',
+                                shadowColor: '#3E18A8',
                                 shadowOpacity: 0.08,
                                 shadowRadius: 8,
                                 elevation: 3,
@@ -86,7 +86,7 @@ export default function TrainingScreen() {
                             activeOpacity={0.85}
                         >
                             <View style={{ flex: 1 }}>
-                                <Text style={{ color: '#06b6d4', fontWeight: 'bold', fontSize: 13, marginBottom: 2 }}>{item.dia}</Text>
+                                <Text style={{ color: '#3E18A8', fontWeight: 'bold', fontSize: 13, marginBottom: 2 }}>{item.dia}</Text>
                                 <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#0f172a' }}>{item.nome}</Text>
                                 <Text style={{ color: '#64748b', marginTop: 2 }}>{item.descricao}</Text>
                             </View>

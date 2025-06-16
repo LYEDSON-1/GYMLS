@@ -10,7 +10,7 @@ export default function HomeScreen() {
 			<View className="items-center flex-1 px-4 pt-10 pb-8 bg-neutral-100">
 				<View className="items-center mb-6 pt-7">
 					<Text className="mb-2 text-4xl font-extrabold text-indigo-900">Bem-vindo 👋</Text>
-					<Text className="mb-2 text-lg text-center text-neutral-500">
+					<Text className="mb-2 text-lg font-medium text-center text-neutral-500">
 						Organize e acompanhe seus treinos de forma simples e prática.
 					</Text>
 				</View>
@@ -23,7 +23,7 @@ export default function HomeScreen() {
 							datasets: [
 								{
 									data: [30, 45, 28, 80, 99, 43, 50],
-									color: (opacity = 1) => `rgba(6, 182, 212, ${opacity})`,
+									color: (opacity = 1) => `rgba(300, 300, 400, ${opacity})`,
 									strokeWidth: 3,
 								},
 							],
@@ -36,18 +36,18 @@ export default function HomeScreen() {
 						chartConfig={{
 							backgroundColor: '#f0f9ff',
 							backgroundGradientFrom: '#f0f9ff',
-							backgroundGradientTo: '#e0f2fe',
+							backgroundGradientTo: '#6E74F5',
 							decimalPlaces: 0,
 							color: (opacity = 1) => `rgba(6, 182, 212, ${opacity})`,
 							labelColor: (opacity = 1) => `rgba(51, 65, 85, ${opacity})`,
 							propsForDots: {
 								r: '6',
 								strokeWidth: '3',
-								stroke: '#06b6d4',
+								stroke: '#000000',
 								fill: '#fff',
 							},
 							propsForBackgroundLines: {
-								stroke: '#bae6fd',
+								stroke: '#fff',
 								strokeDasharray: '4',
 							},
 							propsForLabels: {
@@ -70,15 +70,7 @@ export default function HomeScreen() {
 					/>
 				</View>
 
-				<TouchableOpacity
-					className="w-full max-w-md px-8 py-4 mb-4 shadow bg-neutral-900 rounded-xl active:opacity-80"
-					activeOpacity={0.85}
-					onPress={() => {
-						router.push('/workouts/create')
-					}}
-				>
-					<Text className="text-lg font-extrabold text-center text-white">Adicionar novo treino</Text>
-				</TouchableOpacity>
+				
 
 				<TouchableOpacity
 					className="w-full max-w-md px-8 py-4 mb-8 bg-indigo-900 shadow rounded-xl active:opacity-80"

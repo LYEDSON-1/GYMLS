@@ -1,5 +1,7 @@
-import { Tabs } from 'expo-router';
+import { router, Tabs } from 'expo-router';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
+import { Feather } from '@expo/vector-icons';
+import { View } from 'react-native';
 
 export default function TabLayout() {
   return (
@@ -7,7 +9,7 @@ export default function TabLayout() {
       screenOptions={{
         headerShown: false,
         tabBarShowLabel: false, // Esconde os nomes das abas
-        tabBarActiveTintColor: '#06b6d4',
+        tabBarActiveTintColor: '#3E18A8',
         tabBarInactiveTintColor: '#64748b',
         tabBarStyle: {
           height: 70,
@@ -43,6 +45,36 @@ export default function TabLayout() {
           ),
         }}
       />
+      <Tabs.Screen name="plus" 
+         options={{ title:'Plus', tabBarIcon:({size, color}) => (
+        <View 
+         style={{
+         width: 35,
+         height: 35,
+         backgroundColor: "#3E18A8", // indigo-700
+         borderRadius: 12,
+         justifyContent: "center",
+         alignItems: "center",
+         shadowColor: "#000",
+         shadowOffset: { width: 0, height: 2 },
+         shadowOpacity: 0.25,
+         shadowRadius: 4,
+         elevation: 5, // Android shadow
+         marginTop: 8,
+  }}
+        >
+           <Feather name="plus" size={size} color={color} className='bg-white rounded-lg' />
+        </View>
+         
+          ),       
+        }}
+        listeners={({
+            tabPress: (e) => {
+                e.preventDefault();
+                router.push('/workouts/create');
+            }
+        })}
+        />
       <Tabs.Screen
         name="historico"
         options={{

@@ -23,7 +23,7 @@ export default function Historico() {
 
   return (
     <View className="flex-1 px-4 pt-12 bg-neutral-100">
-      <Text className="mb-2 text-3xl font-extrabold text-center text-cyan-600">
+      <Text className="mb-2 text-3xl font-extrabold text-center text-indigo-800">
         Histórico de Treinos
       </Text>
       <Text className="mb-6 text-lg font-medium text-center text-neutral-500">
@@ -56,7 +56,7 @@ export default function Historico() {
               alignSelf: 'center',
             }}
           >
-            <Text style={{ color: '#06b6d4', fontWeight: 'bold', fontSize: 13, marginBottom: 2 }}>
+            <Text style={{ color: '#3E18A8', fontWeight: 'bold', fontSize: 13, marginBottom: 2 }}>
               {item.data}
             </Text>
             <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#0f172a' }}>

@@ -4,7 +4,7 @@ import axios from "axios";
 import { supabase } from "~/utils/supabase"; 
 import { useNavigation } from '@react-navigation/native';
 
-import { Ionicons } from '@expo/vector-icons';
+import { Feather, Ionicons } from '@expo/vector-icons';
 
 
 const traducao: Record<string, string> = {
@@ -181,7 +181,7 @@ const navigation = useNavigation();
             style={{
               flexDirection: "row",
               alignItems: "center",
-              backgroundColor: "#e0f2fe",
+              backgroundColor: "#ECEFEF",
               paddingVertical: 6,
               paddingHorizontal: 10,
               borderRadius: 8,
@@ -200,7 +200,16 @@ const navigation = useNavigation();
               resizeMode="cover"
             />
             <Text style={{ fontSize: 15 }}>{item.name}</Text>
+            
+             <TouchableOpacity
+             onPress={() => setSelected(prev => prev.filter(e => e.id !== item.id))}
+            style={{ padding: 6,
+          marginRight: 10,  }}
+           >
+           <Feather name="x-circle" size={20} color="#ef4444" />
+           </TouchableOpacity>
           </View>
+          
         )}
       />
       <TouchableOpacity
